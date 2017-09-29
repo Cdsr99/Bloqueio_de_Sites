@@ -1,0 +1,9 @@
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\bin\Debug\Bloqueio_de_Sites.exe.config
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\bin\Debug\Bloqueio_de_Sites.exe
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\bin\Debug\Bloqueio_de_Sites.pdb
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\obj\Debug\Bloqueio_de_Sites.csprojResolveAssemblyReference.cache
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\obj\Debug\Bloqueio_de_Sites.Form1.resources
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\obj\Debug\Bloqueio_de_Sites.Properties.Resources.resources
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\obj\Debug\Bloqueio_de_Sites.csproj.GenerateResource.Cache
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\obj\Debug\Bloqueio_de_Sites.exe
+D:\Programas\C#\Bloqueio_de_Sites\Bloqueio_de_Sites\obj\Debug\Bloqueio_de_Sites.pdb
