@@ -13,13 +13,12 @@ namespace Bloqueio_de_Sites
 {
     public partial class Form1 : Form
     {
+        String caminho = @"c:\Windows\System32\drivers\etc\hosts";
+     
         public Form1()
         {
-            InitializeComponent(); opções();
-            
-
-
-
+            InitializeComponent();
+            conteudo.ReadOnly = true;
 
         }
 
@@ -27,33 +26,71 @@ namespace Bloqueio_de_Sites
         {
 
         }
+        #region função
         public void gravar()
         {
-            String caminho;
-            caminho = @"C:\Windows\System32\drivers\etc\hosts";
-            //textBox1.Text = caminho;
-            
-            String site = "127.0.0.1 " + comboBox1.Text;
-            /*StreamWriter host_ed = new StreamWriter(caminho);
-            host_ed.Write(site);
-            host_ed.Close();*/
-            StreamWriter w = File.AppendText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System),caminho));
-            MessageBox.Show(comboBox1.Text + " bloqueado");
+            try
+            {
+                StreamWriter host_ed = new StreamWriter(caminho);
+                host_ed.WriteLine(conteudo.Text);
+                host_ed.Close();
+                MessageBox.Show(link.Text + " bloqueado");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error =" + ex.ToString());
+            }
+                        
         }
-        public void opções()
+        public void ler_hosts()
         {
-            comboBox1.Items.Add("Facebook");
-            comboBox1.Items.Add("Youtube");
-            comboBox1.Items.Add("Orkut");
-            comboBox1.Items.Add("Spotify");
-            comboBox1.Items.Add("Instagram");
-            comboBox1.Items.Add("Click Jogos");
+            try
+            {
+                StreamReader ler = new StreamReader(caminho);
+                ler.ReadLine();
+                conteudo.Text = ler.ReadToEnd();
+                ler.Close();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
+
+            
         }
+        public void add_url()
+        {
+            String pagina = link.Text;
+            string n127 = "127.0.0.1 ";
+            string hosts = conteudo.Text + n127 + link.Text;
+            conteudo.Text = hosts;
+         
+        }
+        #endregion
 
+        #region buttons
         private void button1_Click(object sender, EventArgs e)
         {
-            gravar();
+            conteudo.ReadOnly = false;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ler_hosts();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            add_url();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            gravar();
+            
+        }
+        #endregion
     }
 }
